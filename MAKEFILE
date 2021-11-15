@@ -1,0 +1,14 @@
+main: main.o unindent.o indent.o
+	g++ -o main main.o unindent.o indent.o
+
+main.o: main.cpp unindent.h indent.h
+	g++ -std=c++11 -c main.cpp
+
+unindent.o: unindent.cpp unindent.h
+	g++ -std=c++11 -c unindent.cpp
+
+indent.o: indent.cpp indent.h
+	g++ -std=c++11 -c indent.cpp
+
+clean:
+	rm -f main.o unindent.o indent.o 
