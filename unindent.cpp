@@ -8,7 +8,7 @@ std::string removeLeadingSpances(std::string line){
         //This line will check if it hits a letter, character, num, etc. 
         if(!isspace(line[i])){
             //This line will give you a substring from the current index up to the end of the line.
-            newLine = line.substr(i,(line.length() - i));
+            new_word = line.substr(i,(line.length() - i));
 			break;//This will simply stop the loop, meaning once it hit this statment, then it will leave the loop
         }
     }
